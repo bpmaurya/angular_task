@@ -1,4 +1,4 @@
-
+ <app-header></app-header>
   <div class="container col-md-6 mt-5">
 
   <form #postForm="ngForm"  (ngSubmit)="onSubmit(postForm.value)">
@@ -46,8 +46,16 @@
     class="btn btn-primary mt-4"
     [disabled]="!postForm.valid">add user</button>
   </form>
-  <button
-  class="btn btn-primary mt-4"  (click)="fetchUser()">fetch  users</button>
+
+  <div class="row col-md-8">
+
+    <button
+    class=" col  md-4 btn btn-primary m-4"  (click)="fetchUser()">fetch  users</button>
+    <button
+    class="col md-4 btn btn-primary m-4"  routerLink="winner">Winner List </button>
+  </div>
+
+
   <div class="" *ngIf="loadedUsers.length < 1 && !isLoading">
     <h4>No User is available</h4>
   </div>
