@@ -1,0 +1,29 @@
+<div class="" *ngIf="winnerUsers.length < 1 && !isLoading">
+  <h4>No User is available</h4>
+</div>
+<div *ngIf="isLoading">
+  <h4>Loading data....</h4>
+</div>
+<div *ngIf="winnerUsers.length >= 1 !isLoading">
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Score</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let user of winnerUsers">
+      <tr>
+        <th scope="row">{{user.id}} </th>
+        <td>{{ user.name}} </td>
+        <td>{{ user.age }} </td>
+        <td>{{user.score }} </td>
+
+
+      </tr>
+    </tbody>
+  </table>
+</div>

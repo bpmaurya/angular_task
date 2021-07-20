@@ -1,7 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './component/home/home.component';
+import { UserComponent } from './component/user/user.component';
+import { WinnerComponent } from './component/winner/winner.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path: '' ,component:HomeComponent},
+  {path: 'winner' ,component:WinnerComponent},
+  {path: 'users' ,component:UserComponent},
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
